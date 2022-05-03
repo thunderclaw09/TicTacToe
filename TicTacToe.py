@@ -4,13 +4,39 @@ from tkinter import ttk
 from Button import Square
 
 
+PlayerTurn = "X"
+
+
 class TicTacToe:
     def __init__(self):
         self.root = Tk()
         self.frm = ttk.Frame(self.root, padding=40)
         self.frm.grid()
 
-        Square1 = Square(self.frm, 0, 0)
+
+    def select(self):
+        global PlayerTurn
+        if (self.isClicked == False):
+            if (PlayerTurn == "X"):
+                self.isClicked = True
+                self.option = "X"
+                #self.Reload()
+                PlayerTurn = "O"
+                
+            elif (PlayerTurn == "O"):
+                self.isClicked = True
+                self.option = "O"
+                #self.Reload()
+                PlayerTurn = "X"
+
+            else:
+                print("You already used this one!")
+
+
+
+
+
+    Square1 = Square(self.frm, 0, 0, select)
 
 
         # self.Answer = ttk.Label(self.frm, text=" ")
@@ -26,7 +52,7 @@ class TicTacToe:
 
         
 
-        mainloop()
+    mainloop()
 
 
     # def EnterFunction(self):
@@ -47,11 +73,13 @@ class TicTacToe:
     #         elif divisor == Number:
     #             Output = "The number is a prime number!"
     #             break
+
+
             
 
         # self.Answer.config(text=Output) 
         
-        print("It should have worked.")
+    print("It should have worked.")
 
 
     

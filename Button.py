@@ -2,16 +2,16 @@ from tkinter import *
 from tkinter import ttk
 # from TicTacToe import *
 
-PlayerTurn = "X"
+# PlayerTurn = "X"
 
 class Square:
 
-    def __init__(self, app, col, r):
+    def __init__(self, app, col, r, select):
         self.option = "-"
         self.isClicked = False
         self.Button = ttk.Button(app, text=self.option, command=self.select).grid(column=col, row=r)
         self.app = app
-
+        self.select = select
         # while True:
         #     if (self.isClicked == True):
         #         Reload()
@@ -20,23 +20,23 @@ class Square:
     def Reload(self):
         self.Button.config(text=self.option)
 
-    def select(self):
-        global PlayerTurn
-        if (self.isClicked == False):
-            if (PlayerTurn == "X"):
-                self.isClicked = True
-                self.option = "X"
-                #self.Reload()
-                PlayerTurn = "O"
+    # def select(self):
+    #     global PlayerTurn
+    #     if (self.isClicked == False):
+    #         if (PlayerTurn == "X"):
+    #             self.isClicked = True
+    #             self.option = "X"
+    #             #self.Reload()
+    #             PlayerTurn = "O"
                 
-            elif (PlayerTurn == "O"):
-                self.isClicked = True
-                self.option = "O"
-                #self.Reload()
-                PlayerTurn = "X"
+    #         elif (PlayerTurn == "O"):
+    #             self.isClicked = True
+    #             self.option = "O"
+    #             #self.Reload()
+    #             PlayerTurn = "X"
                 
-        else:
-            print("You have already used this one!")
+        # else:
+        #     print("You have already used this one!")
 
     
 
