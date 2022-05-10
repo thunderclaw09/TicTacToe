@@ -1,11 +1,8 @@
 #Weight on mars is 38% of person's weight on earth.
 from tkinter import *
 from tkinter import ttk
-from Square import Button
+from Button import Square
 
-def Update(button):
-    button.Button.config(text=button.option)
-    print("It updated. Here's the button option: " + button.option)
 
 class TicTacToe:
     def __init__(self):
@@ -13,8 +10,7 @@ class TicTacToe:
         self.frm = ttk.Frame(self.root, padding=40)
         self.frm.grid()
 
-        # Square1 = Square(self.frm, 0, 0, Update)
-        Button1 = Button()
+        Square1 = Square(self.frm, 0, 0)
 
 
         # self.Answer = ttk.Label(self.frm, text=" ")
@@ -56,7 +52,6 @@ class TicTacToe:
         # self.Answer.config(text=Output) 
         
         print("It should have worked.")
-    
 
 
     
