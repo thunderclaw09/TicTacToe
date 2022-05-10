@@ -6,12 +6,13 @@ PlayerTurn = "X"
 
 class Square:
 
-    def __init__(self, app, col, r):
+    def __init__(self, app, col, r, id):
         self.option = "-"
         self.isClicked = False
         self.Button = ttk.Button(app, text=self.option, command=self.select)
         self.Button.grid(column=col, row=r)
         self.app = app
+        self.id = id
 
         # while True:
         #     if (self.isClicked == True):

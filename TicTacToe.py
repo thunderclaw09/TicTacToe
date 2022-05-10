@@ -4,13 +4,30 @@ from tkinter import ttk
 from Button import Square
 
 
+firstRow = 1
+secondRow = 2
+thirdRow = 3
+
 class TicTacToe:
     def __init__(self):
         self.root = Tk()
         self.frm = ttk.Frame(self.root, padding=40)
         self.frm.grid()
 
-        Square1 = Square(self.frm, 0, 0)
+        Title = ttk.Label(self.frm, text="TIC TAC TOE")
+        Title.grid(column=1, row=0)
+
+        Square1 = Square(self.frm, 0, firstRow, 1)
+        Square2 = Square(self.frm, 1, firstRow, 2)
+        Square3 = Square(self.frm, 2, firstRow, 3)
+        
+        Square4 = Square(self.frm, 0, secondRow, 4)
+        Square5 = Square(self.frm, 1, secondRow, 5)
+        Square6 = Square(self.frm, 2, secondRow, 6)
+
+        Square7 = Square(self.frm, 0, thirdRow, 7)
+        Square8 = Square(self.frm, 1, thirdRow, 8)
+        Square9 = Square(self.frm, 2, thirdRow, 9)
 
 
         # self.Answer = ttk.Label(self.frm, text=" ")
