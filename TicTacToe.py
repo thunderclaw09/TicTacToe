@@ -2,7 +2,7 @@
 from tkinter import *
 from tkinter import ttk
 from Button import Square
-
+from Button import PlayerTurn as player_turn
 
 firstRow = 1
 secondRow = 2
@@ -28,6 +28,11 @@ class TicTacToe:
         Square7 = Square(self.frm, 0, thirdRow, 7)
         Square8 = Square(self.frm, 1, thirdRow, 8)
         Square9 = Square(self.frm, 2, thirdRow, 9)
+
+        PlayerTurn = ttk.Label(self.frm, text="Player: "+player_turn)
+        PlayerTurn.grid(column=1, row=4)
+
+        ######################## NEED TO UPDATE THE PLAYER TURN ##############################
 
 
         # self.Answer = ttk.Label(self.frm, text=" ")
