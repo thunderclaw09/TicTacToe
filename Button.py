@@ -9,7 +9,8 @@ class Square:
     def __init__(self, app, col, r):
         self.option = "-"
         self.isClicked = False
-        self.Button = ttk.Button(app, text=self.option, command=self.select).grid(column=col, row=r)
+        self.Button = ttk.Button(app, text=self.option, command=self.select)
+        self.Button.grid(column=col, row=r)
         self.app = app
 
         # while True:
@@ -26,13 +27,13 @@ class Square:
             if (PlayerTurn == "X"):
                 self.isClicked = True
                 self.option = "X"
-                #self.Reload()
+                self.Reload()
                 PlayerTurn = "O"
                 
             elif (PlayerTurn == "O"):
                 self.isClicked = True
                 self.option = "O"
-                #self.Reload()
+                self.Reload()
                 PlayerTurn = "X"
                 
         else:
