@@ -17,22 +17,26 @@ class TicTacToe:
         Title = ttk.Label(self.frm, text="TIC TAC TOE")
         Title.grid(column=1, row=0)
 
-        Square1 = Square(self.frm, 0, firstRow, 1)
-        Square2 = Square(self.frm, 1, firstRow, 2)
-        Square3 = Square(self.frm, 2, firstRow, 3)
-        
-        Square4 = Square(self.frm, 0, secondRow, 4)
-        Square5 = Square(self.frm, 1, secondRow, 5)
-        Square6 = Square(self.frm, 2, secondRow, 6)
-
-        Square7 = Square(self.frm, 0, thirdRow, 7)
-        Square8 = Square(self.frm, 1, thirdRow, 8)
-        Square9 = Square(self.frm, 2, thirdRow, 9)
-
         PlayerTurn = ttk.Label(self.frm, text="Player: "+player_turn)
         PlayerTurn.grid(column=1, row=4)
 
-        ######################## NEED TO UPDATE THE PLAYER TURN ##############################
+        Square1 = Square(self.frm, 0, firstRow, 1, PlayerTurn)
+        Square2 = Square(self.frm, 1, firstRow, 2, PlayerTurn)
+        Square3 = Square(self.frm, 2, firstRow, 3, PlayerTurn)
+        
+        Square4 = Square(self.frm, 0, secondRow, 4, PlayerTurn)
+        Square5 = Square(self.frm, 1, secondRow, 5, PlayerTurn)
+        Square6 = Square(self.frm, 2, secondRow, 6, PlayerTurn)
+
+        Square7 = Square(self.frm, 0, thirdRow, 7, PlayerTurn)
+        Square8 = Square(self.frm, 1, thirdRow, 8, PlayerTurn)
+        Square9 = Square(self.frm, 2, thirdRow, 9, PlayerTurn)
+
+        
+
+        
+
+        
 
 
         # self.Answer = ttk.Label(self.frm, text=" ")
